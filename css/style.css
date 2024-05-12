@@ -1,25 +1,45 @@
-.header{
-    margin: 0;
-}
-body{
+.header {
     margin: 0;
 }
 
-ul{
-    margin: 0;
-}
-
-img{
+.my-header {
+    position: fixed;
     width: 100%;
+    height: 80px;
+    margin: 0px;
+    background-color: rgb(52, 58, 64, 0);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.375);
+    transition: background-color 0.5s, color 0.5s, height 0.5s;
+    backdrop-filter: blur(0px);
+    border-width: 0px;
+}
+
+a {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    object-fit: contain;
+    height: 100%;
 }
 
 .logo {
-    max-width: 100%; 
-    height: auto; 
-    width: 150px;  
+    max-width: 100%;
+    height: auto;
+    width: 150px;
+    margin-right: 80px;
 }
 
-.footer{
+.footer {
     padding: 30px 0 0 10px;
     margin: 0;
 }
