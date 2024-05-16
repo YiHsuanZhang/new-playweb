@@ -22,17 +22,13 @@ body {
     margin: 0;
 }
 
-ul {
-    margin: 0;
-}
-
-img {
+.my-logo {
     width: 100%;
     object-fit: contain;
     height: 100%;
 }
 
-.logo {
+.my-footer-logo {
     max-width: 100%;
     height: auto;
     width: 150px;
@@ -58,4 +54,8 @@ img {
 
 .my-tw:hover {
     color: rgb(134, 34, 248);
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    filter: invert(100%);
 }
