@@ -8,10 +8,19 @@
     height: 80px;
     margin: 0px;
     background-color: rgb(52, 58, 64, 0);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.375);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.5s, color 0.5s, height 0.5s;
     backdrop-filter: blur(0px);
     border-width: 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+.my-header.fixed {
+    display: flex;
+    backdrop-filter: blur(5px); 
+    background-color: rgba(52, 58, 64, 0.8); 
+    height: 60px; 
+    color: white; 
 }
 
 a {
@@ -20,6 +29,7 @@ a {
 
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 .my-logo {
@@ -58,4 +68,11 @@ body {
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
     filter: invert(100%);
+}
+
+.checkbgc{
+    border-radius: 10px;
+    border-bottom: 10px;
+    border: 1px solid rgb( 120, 120, 120, 0.5);
+    background-color: rgb( 120, 120, 120, 0.5);
 }

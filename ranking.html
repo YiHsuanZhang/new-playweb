@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>---------</title>
+    <style>
+        .selected-item {
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
@@ -26,12 +31,12 @@
             <ul class="col-sm-8 d-flex list-group-numbered align-self-center text-center fs-5"
                 style="margin: 0; color: #fff;">
                 <li class="flex-fill"><a href="index.html" class="list-group-item-action list-group-item">訂閱</a></li>
-                <li class="flex-fill"><a href="category.html" class="list-group-item-action list-group-item">類別</a></li>
+                <li class="flex-fill"><a href="category.html" class="list-group-item-action list-group-item">遊戲</a></li>
                 <li class="flex-fill"><a href="ranking.html" class="list-group-item-action list-group-item">排行榜</a></li>
                 <li class="flex-fill"><a href="" class="list-group-item-action list-group-item">論壇</a></li>
-                <li class="flex-fill"><a href="" class="list-group-item-action list-group-item">客服</a></li>
-                <li class="flex-fill"><a href="" class="list-group-item-action list-group-item"></a></li>
-                <li class="flex-fill"><a href="" class="list-group-item-action list-group-item"></a></li>
+                <li class="flex-fill"><a href="" class="list-group-item-action list-group-item">好友</a></li>
+                <li class="flex-fill"></li>
+                <li class="flex-fill"></li>
             </ul>
             <ul class="col-sm-2 d-flex list-group-numbered align-self-center text-center fs-4"
                 style="margin: 0; color: #fff;">
@@ -54,41 +59,53 @@
     <br>
 
     <div class="container">
-        <h2 class="text-center" style="width: 150px; margin: 20px; background: linear-gradient(to right, #f0d9f0, #e9cdf0, #c299ee); border-radius: 10px; padding: 4px;">熱門排行</h2>
+        <h2 class="text-center"
+            style="width: 150px; margin: 20px; background: linear-gradient(to right, #f0d9f0, #e9cdf0, #c299ee); border-radius: 10px; padding: 4px;">
+            熱門排行</h2>
 
         <div>
             <div class="border" style="width: 100%; height: 130px; margin-bottom: 20px;">
                 <div>
                     <dl class="d-flex">
                         <dt style="margin: 10px;">已選</dt>
-                        <dd style="margin: 10px;"></dd>
-                        <dd style="margin: 10px;"><a href="" class="list-group-item">重製</a></dd>
+                        <dd class="selected-item" style="margin: 10px;"></dd>
+                        <dd style="margin: 10px;"><a href="" class="reset" style="text-decoration: none; color: black;">重製</a></dd>
                     </dl>
                     <dl class="d-flex">
                         <dt style="margin: 10px;">類別</dt>
-                        <dd style="margin: 10px;"><a href="" class="list-group-item">單人</a></dd>
-                        <dd style="margin: 10px;"><a href="" class="list-group-item">格鬥</a></dd>
-                        <dd style="margin: 10px;"><a href="" class="list-group-item">射擊</a></dd>
-                        <dd style="margin: 10px;"><a href="" class="list-group-item">養成</a></dd>
-                        <dd style="margin: 10px;"><a href="" class="list-group-item">卡牌</a></dd>
+                        <dd style="margin: 10px;"><a href="" class="list-group-item">動作</a></dd>
                         <dd style="margin: 10px;"><a href="" class="list-group-item">策略</a></dd>
-                        <dd style="margin: 10px;"><a href="" class="list-group-item">開放世界</a></dd>
+                        <dd style="margin: 10px;"><a href="" class="list-group-item">角色扮演</a></dd>
+                        <dd style="margin: 10px;"><a href="" class="list-group-item">休閒</a></dd>
+                        <dd style="margin: 10px;"><a href="" class="list-group-item">競速</a></dd>
+                        <dd style="margin: 10px;"><a href="" class="list-group-item">運動</a></dd>
+                        <dd style="margin: 10px;"><a href="" class="list-group-item">獨立製作</a></dd>
+                        <dd style="margin: 10px;"><a href="" class="list-group-item">冒險</a></dd>
+                        <dd style="margin: 10px;"><a href="" class="list-group-item">模擬</a></dd>
+                        <dd style="margin: 10px;"><a href="" class="list-group-item">大型多人連線</a></dd>
+                        <dd style="margin: 10px;"><a href="" class="list-group-item">免費遊玩</a></dd>
+                        <dd style="margin: 10px;"><a href="" class="list-group-item">搶先體驗</a></dd>
                     </dl>
                 </div>
-                
             </div>
         </div>
 
         <div class="card mb-3 z-0">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img src="https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/2771110\/ss_3ea195bfd10dfeb0e27a0419b8bcf95e9564d3a2.1920x1080.jpg?t=1705651206" class="img-fluid rounded-start" alt="...">
+                    <img src="https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/2771110\/ss_3ea195bfd10dfeb0e27a0419b8bcf95e9564d3a2.1920x1080.jpg?t=1705651206"
+                        class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">Palworld / 幻獸帕魯</h5>
-                        <div style="margin: 20px;"><p class="card-text border rounded" style="height: 80px;">content</p></div>
-                        <div><p class="card-text"><small class="text-body-secondary border rounded-pill" style="padding: 5px 15px; background-color: rgb(226, 226, 226);">開放世界</small></p></div>
+                        <div style="margin: 20px;">
+                            <p class="card-text border rounded" style="height: 80px;">content</p>
+                        </div>
+                        <div>
+                            <p class="card-text"><small class="text-body-secondary border rounded-pill"
+                                    style="padding: 5px 15px; background-color: rgb(226, 226, 226);">開放世界</small></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -97,13 +114,19 @@
         <div class="card mb-3 z-0">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img src="https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/730\/ss_796601d9d67faf53486eeb26d0724347cea67ddc.1920x1080.jpg?t=1698860631" class="img-fluid rounded-start" alt="...">
+                    <img src="https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/730\/ss_796601d9d67faf53486eeb26d0724347cea67ddc.1920x1080.jpg?t=1698860631"
+                        class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">Counter-Strike 2</h5>
-                        <div style="margin: 20px;"><p class="card-text border rounded" style="height: 80px;">content</p></div>
-                        <div><p class="card-text"><small class="text-body-secondary border rounded-pill" style="padding: 5px 15px; background-color: rgb(226, 226, 226);">射擊</small></p></div>
+                        <div style="margin: 20px;">
+                            <p class="card-text border rounded" style="height: 80px;">content</p>
+                        </div>
+                        <div>
+                            <p class="card-text"><small class="text-body-secondary border rounded-pill"
+                                    style="padding: 5px 15px; background-color: rgb(226, 226, 226);">射擊</small></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -112,13 +135,19 @@
         <div class="card mb-3 z-0">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img src="https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/728880\/ss_43d3b0c28fe56c8de79a9be8e97afa7d40dddf96.1920x1080.jpg?t=1706873645" class="img-fluid rounded-start" alt="...">
+                    <img src="https:\/\/cdn.akamai.steamstatic.com\/steam\/apps\/728880\/ss_43d3b0c28fe56c8de79a9be8e97afa7d40dddf96.1920x1080.jpg?t=1706873645"
+                        class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">Overcooked! 2</h5>
-                        <div style="margin: 20px;"><p class="card-text border rounded" style="height: 80px;">content</p></div>
-                        <div><p class="card-text"><small class="text-body-secondary border rounded-pill" style="padding: 5px 15px; background-color: rgb(226, 226, 226);">搞笑</small></p></div>
+                        <div style="margin: 20px;">
+                            <p class="card-text border rounded" style="height: 80px;">content</p>
+                        </div>
+                        <div>
+                            <p class="card-text"><small class="text-body-secondary border rounded-pill"
+                                    style="padding: 5px 15px; background-color: rgb(226, 226, 226);">搞笑</small></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -129,8 +158,9 @@
     <br>
     <br>
 
-    <div class="text-center" style="margin-bottom: 50px;"><button class="btn btn-primary" style="font-size: 20px;">查看更多</button></div>
-    
+    <div class="text-center" style="margin-bottom: 50px;"><button class="btn btn-primary"
+            style="font-size: 20px;">查看更多</button></div>
+
 
     <!-- 中間內容 end -->
     <!-- ---------------------------------------------------------------------------------------------------------------->
@@ -169,6 +199,31 @@
     <!-- 頁尾 end -->
 
     <script>
+        $(document).ready(function () {
+            let selectedItems = [];
+            const maxSelection = 5;
+
+            $("dl.d-flex dd a.list-group-item").click(function(e){
+                e.preventDefault(); // 阻止默认的链接跳转行为
+                let selectedText = $(this).text();
+                
+                if (!selectedItems.includes(selectedText)) {
+                    if (selectedItems.length < maxSelection) {
+                        selectedItems.push(selectedText);
+                        $(".selected-item").text(selectedItems.join(", "));
+                    } else {
+                        alert("最多只能選擇5個類別");
+                    }
+                }
+            });
+
+            $(".reset").click(function (e) {
+                e.preventDefault();
+                selectedItems = [];
+                $(".selected-item").text("");
+            });
+        });
+
         $(document).on("scroll", function () {
             let value = $(document).scrollTop() > 20;
 
