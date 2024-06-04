@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Box with Text</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .container {
+            perspective: 1000px;
+        }
+
+        .box {
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateX(-20deg) rotateY(-30deg);
+        }
+
+        .box .face {
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            font-size: 30px;
+        }
+
+        .box .front {
+            transform: rotateY(6deg) translateY(6px) translateZ(21px);
+        }
+
+        .box .back {
+            transform: rotateY(186deg) translateY(6px) translateZ(33px);
+        }
+
+        .box .left {
+            transform: rotateY(-86deg) translateY(5px) translateZ(24px);
+            width: 50px;
+            height: 50px;
+        }
+
+        .box .right {
+            transform: rotateY(95deg) translateY(4px) translateZ(77px);
+            width: 50px;
+            height: 50px;
+        }
+
+        .box .top {
+            transform: rotateX(90deg) translateY(-5px) translateZ(20px) rotateZ(-5deg);
+            width: 100px;
+            height: 50px;
+        }
+
+        .box .bottom {
+            transform: rotateX(90deg) translateY(-5px) translateZ(-31px) rotateZ(-5deg);
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="face front">多人</div>
+            <div class="face back"></div>
+            <div class="face left"></div>
+            <div class="face right"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+        </div>
+    </div>
+</body>
+
+</html>
