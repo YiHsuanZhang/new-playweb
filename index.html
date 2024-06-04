@@ -10,9 +10,104 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="jquery/jquery-3.7.1.min.js"></script>
     <title>---------</title>
+    <style>
+        @keyframes arrowAnimation {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(25px);
+            }
+        }
+
+        .snow-container {
+            position: absolute;
+            height: 1072px;
+            width: 100%;
+            max-width: 100%;
+            top: 0;
+            overflow: hidden;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .snow {
+            display: block;
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            pointer-events: none;
+            -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+            -webkit-animation: snow linear infinite;
+            animation: snow linear infinite;
+        }
+
+        .snow.foreground {
+            background-image: url("https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-large-075d267ecbc42e3564c8ed43516dd557.png");
+            -webkit-animation-duration: 15s;
+            animation-duration: 15s;
+        }
+
+        .snow.foreground.layered {
+            -webkit-animation-delay: 7.5s;
+            animation-delay: 7.5s;
+        }
+
+        .snow.middleground {
+            background-image: url(https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-medium-0b8a5e0732315b68e1f54185be7a1ad9.png);
+            -webkit-animation-duration: 20s;
+            animation-duration: 20s;
+        }
+
+        .snow.middleground.layered {
+            -webkit-animation-delay: 10s;
+            animation-delay: 10s;
+        }
+
+        .snow.background {
+            background-image: url(https://dl6rt3mwcjzxg.cloudfront.net/assets/snow/snow-small-1ecd03b1fce08c24e064ff8c0a72c519.png);
+            -webkit-animation-duration: 30s;
+            animation-duration: 30s;
+        }
+
+        .snow.background.layered {
+            -webkit-animation-delay: 15s;
+            animation-delay: 15s;
+        }
+
+        @-webkit-keyframes snow {
+            0% {
+                -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0);
+            }
+
+            100% {
+                -webkit-transform: translate3d(15%, 100%, 0);
+                transform: translate3d(15%, 100%, 0);
+            }
+        }
+
+        @keyframes snow {
+            0% {
+                -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0);
+            }
+
+            100% {
+                -webkit-transform: translate3d(15%, 100%, 0);
+                transform: translate3d(15%, 100%, 0);
+            }
+        }
+    </style>
 </head>
 
 <body class="area">
@@ -44,13 +139,39 @@
     <!-- 頁首 end -->
     <!-- ---------------------------------------------------------------------------------------------------------------->
     <!-- 中間內容 start -->
+
+
     <div style="position: relative;">
+        <div class="snow-container">
+            <div class="snow foreground"></div>
+            <div class="snow foreground layered"></div>
+            <div class="snow middleground"></div>
+            <div class="snow middleground layered"></div>
+            <div class="snow background"></div>
+            <div class="snow background layered"></div>
+        </div>
         <img class="w-100" src="image/HLEGACY.jpg" alt="">
-        <div class="text-center" style="margin: 15px; position: absolute; top: 25%; right: 0; backdrop-filter: blur(3px); width: 1000px; height: 300px; color: white;">
-            <h3>Dan Gaming</h3>
-            
+        <div class="text-center"
+            style="margin: 15px; position: absolute; top: 20%; right: 10%; backdrop-filter: blur(5px); width: 700px; height: 350px; color: white;">
+            <h1 class="fw-bold" style="text-shadow: black 0.3em 0.1em 0.18em">無限遊玩，無限可能</h1>
+            <div class="fs-4 fw-bolder" style="text-shadow: black 0.2em 0.1em 0.1em">訂閱我們的遊戲平台，暢享超過100款精彩遊戲，體驗無限樂趣！
+            </div>
+            <div class="fs-5 fw-bolder" style="text-shadow: black 0.2em 0.1em 0.1em">無限遊玩：訂閱會員可無限次遊玩平台上的所有遊戲。</div>
+            <div class="fs-6 fw-bolder" style="text-shadow: black 0.2em 0.1em 0.1em">一個月方案：每月 $499，無限暢玩所有遊戲。</div>
+            <div class="fs-6 fw-bolder" style="text-shadow: black 0.2em 0.1em 0.1em">三個月方案：每季 $899，可以節省費用40%。</div>
+            <div class="fs-5 fw-bolder" style="text-shadow: black 0.2em 0.1em 0.1em">高品質的遊戲庫，包含多種類型的遊戲，應有盡有。</div>
+            <div class="fs-4 fw-bolder" style="text-shadow: black 0.2em 0.1em 0.1em">立即訂閱，開始你的遊戲之旅！</div>
+        </div>
+
+        <div class="arrow-container"
+            style="position: absolute; top: 45%; right: 30%; animation: arrowAnimation 1s ease infinite alternate;">
+            <a href="#content" class="scroll-down-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </a>
         </div>
     </div>
+
+
     <ul class="circles">
         <li></li>
         <li></li>
@@ -66,7 +187,8 @@
 
     <div class="container">
         <div class="row w-100 justify-content-center">
-            <h1 class="text-center m-5 fw-bold" style="color: white; text-shadow: black 0.2em 0.1em 0.2em"> 比較訂閱方案 </h1>
+            <h1 class="text-center m-5 fw-bold"
+                style="font-size: 50px; color: white; text-shadow: black 0.2em 0.1em 0.2em"> 比較訂閱方案 </h1>
             <div class="col-md-5 rounded"
                 style="background-color: rgb(231, 231, 231, 0.5); padding: 20px 0 20px 20px; margin: 20px 20px 20px 50px;">
                 <div class="shadow rounded text-bg-warning" style="margin-right: 20px; padding-bottom: 10px;">
@@ -186,9 +308,11 @@
     <br>
     <br>
     <div class="container">
-        <h1 class="text-center m-5 fw-bold" style="color: white; text-shadow: black 0.2em 0.1em 0.2em;"> 更多遊戲資訊 </h1>
+        <h1 class="text-center m-5 fw-bold"
+            style="font-size: 50px; color: white; text-shadow: black 0.2em 0.1em 0.2em;"> 更多遊戲資訊 </h1>
     </div>
-    <div id="carouselExampleCaptions" class="carousel slide z-0" style="backdrop-filter: blur(3px); background-color: rgb(202, 202, 202, 0.5); margin: 5rem 0;">
+    <div id="carouselExampleCaptions" class="carousel slide z-0"
+        style="backdrop-filter: blur(3px); background-color: rgb(202, 202, 202, 0.5); margin: 5rem 0;">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="container">
@@ -280,7 +404,12 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <h1 class="text-center m-5 fw-bold" style="color: white; text-shadow: black 0.2em 0.1em 0.2em"> 選擇訂閱方案 </h1>
+
+    <br id="content"></br>
+    <br></br>
+
+    <h1 class="text-center m-5 fw-bold" style="font-size: 50px; color: white; text-shadow: black 0.2em 0.1em 0.2em">
+        選擇訂閱方案 </h1>
     <div class="container border rounded"
         style="padding-top: 15px; padding-bottom: 20px; margin-top: 50px; margin-bottom: 50px; padding-left: 40px; padding-right: 20px;  background-color: rgb(202, 202, 202, 0.5);">
         <div class="tab-content" id="myTabContent">
@@ -288,25 +417,26 @@
                 <div class="container mt-3 row d-flex" style="height: 300px; margin-bottom: 25px;">
                     <div class="mw-50 col-sm-9 my-subscription">
                         <h4 class="me-3 mt-4 fs-4"
-                            style="width: 120px; margin: 20px; background: rgba(255, 208, 1, 0.5); border-radius: 20px; padding: 5px;">
+                            style="width: 120px; margin: 20px; background: rgba(255, 208, 1, 0.7); border-radius: 20px; padding: 5px; color: white;">
                             &#160;高級方案</h4>
                         <p class="ms-5 mt-3 fs-4">&#160;全面存取，無限制</p>
                         <p class="ms-5 fs-5">&#160;擁有所有遊戲免費下載遊玩的功能。</p>
                         <p class="ms-5" style="font-size: 12px;">&#160;每一個月定期付款會持續至取消為止。查看 DanGaming
                             條款以瞭解價格變更及如何取消的詳細資訊。
                         </p>
-                        <p class="text-end fs-4">&#160; NT$999 / 月 <span class="fs-6">( 三個月方案比較划算唷 ! )</span></p>
+                        <p class="text-end fs-4">&#160; NT$499 / 月 <span class="fs-6">( 或選擇三個月方案可節省 40% 費用 ! )</span>
+                        </p>
                     </div>
                     <div class="mw-50 col-sm-9 my-subscription">
                         <h4 class="me-3 mt-4 fs-4"
-                            style="width: 120px; margin: 20px; background: rgb(243, 8, 8, 0.5); border-radius: 20px; padding: 5px;">
+                            style="width: 120px; margin: 20px; background: rgb(243, 8, 8, 0.8); border-radius: 20px; padding: 5px; color: white;">
                             &#160;升級方案</h4>
                         <p class="ms-5 mt-3 fs-4">&#160;全面存取，無限制</p>
                         <p class="ms-5 fs-5">&#160;擁有所有遊戲免費下載遊玩的功能。</p>
                         <p class="ms-5" style="font-size: 12px;">&#160;每三個月定期付款會持續至取消為止。查看 DanGaming
                             條款以瞭解價格變更及如何取消的詳細資訊。
                         </p>
-                        <p class="text-end fs-4">&#160; NT$1399 / 3個月 <span class="fs-6">( 一個月約 NT$466 )</span></p>
+                        <p class="text-end fs-4">&#160; NT$899 / 3個月 <span class="fs-6">( 一個月約 NT$300 )</span></p>
                     </div>
                     <div class="col-sm-3">
                         <div class="btn-group d-block  border-start" role="group" aria-label="Basic example"
@@ -329,13 +459,43 @@
             </div>
         </div>
     </div>
-
-
+    <h1 class="text-center m-5 fw-bold" style="font-size: 50px; color: white; text-shadow: black 0.2em 0.1em 0.2em">
+        常見問題 </h1>
+    <div class="container border rounded"
+        style="padding-top: 15px; padding-bottom: 20px; margin-top: 50px; margin-bottom: 50px; padding-left: 40px; padding-right: 40px;  background-color: rgb(202, 202, 202, 0.5);">
+        <div class="tab-content" id="myTabContent">
+            <h4 class="mx-4 my-3" style="color: white; text-shadow: black 0.2em 0.2em 0.3em"> 訂閱相關問題 </h4>
+            <div>
+                <div>
+                    <div class="border rounded bg-light text-dark py-3 px-3 mx-3">我是否需要訂閱Dan Game才能遊玩所有線上遊戲？</div>
+                    <div class="py-3 px-3 mx-3">
+                        我們主打以訂閱代替購買下載的遊戲，所以需要Dan Game訂閱方案才能線上遊玩。<br>
+                        若是不訂閱也可以購買遊戲，這樣就不需要訂閱資格也可以遊玩遊戲。
+                    </div>
+                </div>
+                <div>
+                    <div class="border rounded bg-light text-dark py-3 px-3 mx-3">Dan Game？</div>
+                    <div class="py-3 px-3 mx-3">
+                        我們主打以訂閱代替購買下載的遊戲，所以需要Dan Game訂閱方案才能線上遊玩。<br>
+                        若是不訂閱也可以購買遊戲，這樣就不需要訂閱資格也可以遊玩遊戲。
+                    </div>
+                </div>
+                <div>
+                    <div class="border rounded bg-light text-dark py-3 px-3 mx-3">Dan Game？？？？？</div>
+                    <div class="py-3 px-3 mx-3">
+                        我們主打以訂閱代替購買下載的遊戲，所以需要Dan Game訂閱方案才能線上遊玩。<br>
+                        若是不訂閱也可以購買遊戲，這樣就不需要訂閱資格也可以遊玩遊戲。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- 中間內容 end -->
     <!-- ---------------------------------------------------------------------------------------------------------------->
     <!-- 頁尾 start -->
-    <div class="footer row d-flex my-footer border-top border-opacity-10" style="white-space:nowrap; background-color: rgb(202, 202, 202, 0.5);">
+    <div class="footer row d-flex my-footer border-top border-opacity-10"
+        style="white-space:nowrap; background-color: rgb(202, 202, 202, 0.5);">
         <div class="col-sm-4 flex-fill text-end">
             <a href="#"><img class="my-footer-logo" src="image/logo-b.png" alt=""></a>
         </div>

@@ -73,8 +73,8 @@ body {
 .checkbgc{
     border-radius: 10px;
     border-bottom: 10px;
-    border: 1px solid rgb( 120, 120, 120, 0.5);
-    background-color: rgb( 120, 120, 120, 0.5);
+    border: 1px solid rgba(95, 95, 95, 0.5);
+    background-color: rgba(94, 94, 94, 0.5);
 }
 
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
@@ -231,4 +231,9 @@ body {
     border-radius: 4px;
     margin: 0 10px;
     font-size: 13px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: rgb(0, 0, 0, 0.4) 0.5em 0.5em 0.5em;
 }
