@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Switch with Sliding Background</title>
+    <style>
+        .button-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: 100px;
+            margin: 50px auto;
+        }
+
+        .button {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            z-index: 1;
+            position: relative;
+            text-align: center;
+        }
+
+        .button.active {
+            color: white;
+        }
+
+        .slider {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 50%;
+            background-color: #3498db;
+            transition: top 0.3s ease;
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="button-container">
+        <button id="button1" class="button active" onclick="toggleButtons(1)">Button 1</button>
+        <button id="button2" class="button" onclick="toggleButtons(2)">Button 2</button>
+        <div class="slider" id="slider"></div>
+    </div>
+    <script>
+        function toggleButtons(buttonId) {
+            var button1 = document.getElementById('button1');
+            var button2 = document.getElementById('button2');
+            var slider = document.getElementById('slider');
+
+            if (buttonId === 1) {
+                slider.style.top = '0%';
+                button1.classList.add('active');
+                button2.classList.remove('active');
+            } else {
+                slider.style.top = '50%';
+                button1.classList.remove('active');
+                button2.classList.add('active');
+            }
+        }
+
+    </script>
+</body>
+
+</html>
